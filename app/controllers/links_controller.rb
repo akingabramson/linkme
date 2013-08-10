@@ -6,7 +6,17 @@ class LinksController < ApplicationController
     headers['Access-Control-Allow-Origin'] = '*' 
     headers['Access-Control-Request-Method'] = '*' 
   end
+
   def create
-    render :json => {sampleurl: "http://www.google.com"}
+    @link = Link.new(params[:link])
+    if @link.save
+      render :json => {url: link_url(@link)}
+    else
+      render :json => @link.errors, status: 422
+    end
+  end
+
+  def show
+    @link = Link.find(params[:id])
   end
 end

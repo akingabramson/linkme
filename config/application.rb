@@ -58,5 +58,6 @@ module Linkme
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.action_dispatch.default_headers = { 'Header-Name' => 'Header-Value', 'X-Frame-Options' => 'DENY' }
   end
 end

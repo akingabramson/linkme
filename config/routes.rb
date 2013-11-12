@@ -1,5 +1,7 @@
 Linkme::Application.routes.draw do
-  resources :links, only: [:create, :show]
+  resources :links, only: [:create, :show, :index]
+  root :to => "links#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

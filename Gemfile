@@ -24,7 +24,7 @@ group :development do
   gem 'pry-rails'
 end
 
-# gem 'jquery-rails'
+gem 'jquery-rails'
 
 
 # To use ActiveModel has_secure_password

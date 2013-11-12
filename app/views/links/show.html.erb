@@ -1,2 +1,9 @@
 
-    <iframe src="<%= @link.url%>" frameborder="0" height="100%" width="100%"></iframe>
+<a href="javascript: (function(){
+	window.scrollTo(0, <%=@link.position%>);
+})();">Save me</a>
+
+<a href="<%=@link.url%>">Click me</a>
+
+
+<!-- <iframe src="<%= @link.url%>" frameborder="0" height="100%" width="100%"></iframe> -->

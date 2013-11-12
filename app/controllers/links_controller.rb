@@ -7,8 +7,13 @@ class LinksController < ApplicationController
     headers['Access-Control-Request-Method'] = '*' 
   end
 
+  def index
+    
+  end
+
   def create
     @link = Link.new(params[:link])
+
     if @link.save
       render :json => {url: link_url(@link)}
     else

@@ -1,0 +1,15 @@
+<a href='
+
+javascript: (function(){
+	var d = prompt("Enter Name");
+	if (!!d) {
+		var name = d.split(" ");
+		name = name.reverse();
+		if (name.length > 1){
+			name.splice(1,0,",");
+		}
+		name = name.join(" ");
+		window.open("http://www.rotoworld.com/content/playersearch.aspx?sport=nfl&searchname="+encodeURIComponent(name));
+	}
+})();
+'>Dis guy</a>
